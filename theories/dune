@@ -1,0 +1,5 @@
+(coq.theory
+  (name parseque)
+  (package parseque)
+  (synopsis "Total Parser Combinators in Coq"))
+
