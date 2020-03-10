@@ -1,6 +1,6 @@
 Require Import Parseque.
 Require Import Running.
-Require Import Ascii.
+Require Import String Ascii.
 
 Section ArithmeticLanguage.
 

@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@opam/dune": ">=2.3",
-    "@opam/coq": "*"
+    "@opam/coq": "8.10.1"
   },
 	"resolutions": {
 		"@opam/dune": "github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34"
