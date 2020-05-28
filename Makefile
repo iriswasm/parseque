@@ -1,10 +1,10 @@
 .PHONY : all clean
 
 all :
-	dune build @all
+	export HOME=`pwd`; dune build @all
 
 install:
-	dune build @install
+	export HOME=`pwd`; dune build @install
 
 clean :
 	rm -rf _build || true

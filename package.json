@@ -3,13 +3,18 @@
   "version": "1.0",
   "description": "Total Parser Combinators in Coq",
   "esy": {
+		"buildEnv": {
+			"COQBIN": "#{@opam/coq.bin}/",
+			"COQLIB": "#{@opam/coq.lib}/coq/",
+			"HOME": "#{self.install}"
+		},
     "build": "dune build -p #{self.name}",
 		"install": "dune install --prefix=#{self.install}",
     "buildsInSource": "_build"
   },
   "dependencies": {
     "@opam/dune": ">=2.3",
-    "@opam/coq": "8.10.1"
+    "@opam/coq": ">=8.7"
   },
 	"resolutions": {
 		"@opam/dune": "github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34"
