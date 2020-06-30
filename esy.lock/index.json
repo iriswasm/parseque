@@ -1,5 +1,5 @@
 {
-  "checksum": "fe5c695bc748dece89d468c17956f739",
+  "checksum": "ec82c45ca05fe6d38fdb7639278b7983",
   "root": "parseque@link-dev:./package.json",
   "node": {
     "parseque@link-dev:./package.json": {
@@ -13,8 +13,8 @@
       },
       "overrides": [],
       "dependencies": [
-        "@opam/dune@github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34@d41d8cd9",
-        "@opam/coq@opam:8.11.1@81a5947e"
+        "ocaml@4.10.0@d41d8cd9", "@opam/dune@opam:2.6.0@3a9808e6",
+        "@opam/coq@opam:8.11.2@b2a720e0"
       ],
       "devDependencies": []
     },
@@ -31,6 +31,39 @@
       "overrides": [],
       "dependencies": [],
       "devDependencies": []
+    },
+    "@opam/ocamlfind-secondary@opam:1.8.1@1afa38b2": {
+      "id": "@opam/ocamlfind-secondary@opam:1.8.1@1afa38b2",
+      "name": "@opam/ocamlfind-secondary",
+      "version": "opam:1.8.1",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/18/18ca650982c15536616dea0e422cbd8c#md5:18ca650982c15536616dea0e422cbd8c",
+          "archive:http://download2.camlcity.org/download/findlib-1.8.1.tar.gz#md5:18ca650982c15536616dea0e422cbd8c",
+          "archive:http://download.camlcity.org/download/findlib-1.8.1.tar.gz#md5:18ca650982c15536616dea0e422cbd8c"
+        ],
+        "opam": {
+          "name": "ocamlfind-secondary",
+          "version": "1.8.1",
+          "path": "esy.lock/opam/ocamlfind-secondary.1.8.1"
+        }
+      },
+      "overrides": [
+        {
+          "opamoverride":
+            "esy.lock/overrides/opam__s__ocamlfind_secondary_opam__c__1.8.1_opam_override"
+        }
+      ],
+      "dependencies": [
+        "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
+        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@ba28931b",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
+        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@ba28931b"
+      ]
     },
     "@opam/ocamlfind@opam:1.8.1@ff07b0f9": {
       "id": "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
@@ -58,6 +91,33 @@
       "dependencies": [
         "ocaml@4.10.0@d41d8cd9", "@opam/conf-m4@opam:1@3b2b148a",
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [ "ocaml@4.10.0@d41d8cd9" ]
+    },
+    "@opam/ocaml-secondary-compiler@opam:4.08.1-1@ba28931b": {
+      "id": "@opam/ocaml-secondary-compiler@opam:4.08.1-1@ba28931b",
+      "name": "@opam/ocaml-secondary-compiler",
+      "version": "opam:4.08.1-1",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/72/723b6bfe8cf5abcbccc6911143f71055#md5:723b6bfe8cf5abcbccc6911143f71055",
+          "archive:https://github.com/ocaml/ocaml/archive/4.08.1.tar.gz#md5:723b6bfe8cf5abcbccc6911143f71055"
+        ],
+        "opam": {
+          "name": "ocaml-secondary-compiler",
+          "version": "4.08.1-1",
+          "path": "esy.lock/opam/ocaml-secondary-compiler.4.08.1-1"
+        }
+      },
+      "overrides": [
+        {
+          "opamoverride":
+            "esy.lock/overrides/opam__s__ocaml_secondary_compiler_opam__c__4.08.1_1_opam_override"
+        }
+      ],
+      "dependencies": [
+        "ocaml@4.10.0@d41d8cd9", "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [ "ocaml@4.10.0@d41d8cd9" ]
     },
@@ -89,43 +149,56 @@
       ],
       "devDependencies": [ "ocaml@4.10.0@d41d8cd9" ]
     },
-    "@opam/dune@github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34@d41d8cd9": {
-      "id":
-        "@opam/dune@github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34@d41d8cd9",
+    "@opam/dune@opam:2.6.0@3a9808e6": {
+      "id": "@opam/dune@opam:2.6.0@3a9808e6",
       "name": "@opam/dune",
-      "version":
-        "github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34",
+      "version": "opam:2.6.0",
       "source": {
         "type": "install",
         "source": [
-          "github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34"
-        ]
+          "archive:https://opam.ocaml.org/cache/sha256/12/12c9d849fbc5f202f99e9f8ed13fdff7de85ae9c5206cb1b821763dcd1916fc3#sha256:12c9d849fbc5f202f99e9f8ed13fdff7de85ae9c5206cb1b821763dcd1916fc3",
+          "archive:https://github.com/ocaml/dune/releases/download/2.6.0/dune-2.6.0.tbz#sha256:12c9d849fbc5f202f99e9f8ed13fdff7de85ae9c5206cb1b821763dcd1916fc3"
+        ],
+        "opam": {
+          "name": "dune",
+          "version": "2.6.0",
+          "path": "esy.lock/opam/dune.2.6.0"
+        }
       },
-      "overrides": [],
+      "overrides": [
+        {
+          "opamoverride":
+            "esy.lock/overrides/opam__s__dune_opam__c__2.6.0_opam_override"
+        }
+      ],
       "dependencies": [
-        "ocaml@4.10.0@d41d8cd9", "@opam/base-unix@opam:base@87d0b2eb",
+        "ocaml@4.10.0@d41d8cd9",
+        "@opam/ocamlfind-secondary@opam:1.8.1@1afa38b2",
+        "@opam/base-unix@opam:base@87d0b2eb",
         "@opam/base-threads@opam:base@36803084",
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [
-        "ocaml@4.10.0@d41d8cd9", "@opam/base-unix@opam:base@87d0b2eb",
+        "ocaml@4.10.0@d41d8cd9",
+        "@opam/ocamlfind-secondary@opam:1.8.1@1afa38b2",
+        "@opam/base-unix@opam:base@87d0b2eb",
         "@opam/base-threads@opam:base@36803084"
       ]
     },
-    "@opam/coq@opam:8.11.1@81a5947e": {
-      "id": "@opam/coq@opam:8.11.1@81a5947e",
+    "@opam/coq@opam:8.11.2@b2a720e0": {
+      "id": "@opam/coq@opam:8.11.2@b2a720e0",
       "name": "@opam/coq",
-      "version": "opam:8.11.1",
+      "version": "opam:8.11.2",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://opam.ocaml.org/cache/sha512/97/974f09268ca729b525884e02e3179837e31f8001a2c244f138a36a7984329324083e66d07526bba89acaed656eb7711e2c5b257517309d0479839c5d1ac96aa5#sha512:974f09268ca729b525884e02e3179837e31f8001a2c244f138a36a7984329324083e66d07526bba89acaed656eb7711e2c5b257517309d0479839c5d1ac96aa5",
-          "archive:https://github.com/coq/coq/archive/V8.11.1.tar.gz#sha512:974f09268ca729b525884e02e3179837e31f8001a2c244f138a36a7984329324083e66d07526bba89acaed656eb7711e2c5b257517309d0479839c5d1ac96aa5"
+          "archive:https://opam.ocaml.org/cache/sha512/f8/f8ab307b8e39ffda5f6984e187c1f8de1cb6dec5c322726dbbe535ee611683cfeeb9cee3e11ad83f5e44e843fc51e7e2d50b4ea69ab42fde38aaf3d0cf2dea3c#sha512:f8ab307b8e39ffda5f6984e187c1f8de1cb6dec5c322726dbbe535ee611683cfeeb9cee3e11ad83f5e44e843fc51e7e2d50b4ea69ab42fde38aaf3d0cf2dea3c",
+          "archive:https://github.com/coq/coq/archive/V8.11.2.tar.gz#sha512:f8ab307b8e39ffda5f6984e187c1f8de1cb6dec5c322726dbbe535ee611683cfeeb9cee3e11ad83f5e44e843fc51e7e2d50b4ea69ab42fde38aaf3d0cf2dea3c"
         ],
         "opam": {
           "name": "coq",
-          "version": "8.11.1",
-          "path": "esy.lock/opam/coq.8.11.1"
+          "version": "8.11.2",
+          "path": "esy.lock/opam/coq.8.11.2"
         }
       },
       "overrides": [],
