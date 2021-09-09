@@ -17,11 +17,15 @@ mathematics (e.g., the full formalization of the Feit-Thompson theorem
 and homotopy type theory) and teaching.
 """
 
+depopts: [
+  "coq-native"
+]
 depends: [
-  "ocaml" {>= "4.05.0" & < "4.12"}
+  "ocaml" {>= "4.05.0"}
   "ocamlfind" {build}
   "num"
   "conf-findutils" {build}
+  "zarith" {>= "1.10"}
 ]
 build: [
   [
@@ -33,7 +37,7 @@ build: [
     "-libdir" "%{lib}%/coq"
     "-datadir" "%{share}%/coq"
     "-coqide" "no"
-    "-native-compiler" {os = "macos"} "no" {os = "macos"}
+    "-native-compiler" "yes" {coq-native:installed} "no" {!coq-native:installed}
   ]
   [make "-j%{jobs}%"]
   [make "-j%{jobs}%" "byte"]
@@ -48,6 +52,6 @@ extra-files: [
 ]
 
 url {
-  src: "https://github.com/coq/coq/archive/V8.11.2.tar.gz"
-  checksum: "sha512=f8ab307b8e39ffda5f6984e187c1f8de1cb6dec5c322726dbbe535ee611683cfeeb9cee3e11ad83f5e44e843fc51e7e2d50b4ea69ab42fde38aaf3d0cf2dea3c"
+  src: "https://github.com/coq/coq/archive/V8.13.2.tar.gz"
+  checksum: "sha256=1e7793d8483f1e939f62df6749f843df967a15d843a4a5acb024904b76e25a14"
 }

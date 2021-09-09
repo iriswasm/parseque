@@ -9,13 +9,13 @@
 			"HOME": "#{self.install}"
 		},
     "build": "dune build -p #{self.name}",
-		"install": "dune install --prefix=#{self.install}",
     "buildsInSource": "_build"
   },
   "dependencies": {
     "@opam/dune": ">=2.3",
     "@opam/coq": ">=8.7",
-		"ocaml": "*"
+		"ocaml": "*",
+		"@opam/ocamlfind": "1.8.1"
   }
 }
 
