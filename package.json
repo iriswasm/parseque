@@ -15,7 +15,7 @@
     "@opam/dune": ">=2.3",
     "@opam/coq": ">=8.7",
 		"ocaml": "*",
-		"@opam/ocamlfind": "1.9.3"
+		"@opam/ocamlfind": "*"
   }
 }
 
